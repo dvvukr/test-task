@@ -1,0 +1,339 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+}
+.btn{
+    font-family: 'NeoSansPro', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 16px;
+    letter-spacing: normal;
+    color: #000000;
+    padding: 20px 15px 16px;
+    width: 100%;
+    border-radius: 25px;
+    border: none;
+    text-transform: uppercase;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.btn:focus{
+    outline: none;
+}
+.btn_yellow{
+    background-image: linear-gradient(to bottom, #ffc549, #ff9317);
+}
+.btn_yellow:hover {
+    opacity: 0.8;
+}
+.btn:disabled{
+    opacity: 0.5;
+    cursor: no-drop;
+}
+.registration{
+    position: relative;
+    max-width: 375px;
+    margin: 0 auto;
+    padding-top: 48px;
+    padding-bottom: 59px;
+}
+.registration_close{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+.registration_close:focus{
+    outline: none;
+}
+.registration_logo{
+    padding: 62px 0 59px;
+    background: url("../img/bg.png") no-repeat center;
+    background-size: contain;
+}
+.registration_logo a {
+    display: block;
+}
+.registration_logo img{
+    margin: 0 auto;
+    display: block;
+}
+.registration_body{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.registration_title{
+    font-family: 'NeoSansPro', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.form-input-wrap{
+    margin-bottom: 40px;
+}
+.form-group{
+    margin-bottom: 20px;
+    position: relative;
+}
+.input-label {
+    font-family: 'NeoSansPro', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #858585;
+    margin-bottom: 0;
+    position: absolute;
+    left: 53px;
+    top: 17px;
+    z-index: 1;
+    -webkit-transition: font-size 150ms ease-out,-webkit-transform 150ms ease-out;
+    transition: font-size 150ms ease-out,-webkit-transform 150ms ease-out;
+    transition: transform 150ms ease-out,font-size 150ms ease-out;
+    transition: transform 150ms ease-out,font-size 150ms ease-out,-webkit-transform 150ms ease-out;
+}
+.focused .input-label{
+    -webkit-transform: translateY(-225%);
+    transform: translateY(-166%);
+    background: #000;
+    z-index: 2;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    position: absolute;
+    left: 12px;
+    padding: 0 9px 0 8px;
+    color: #ffc824;
+}
+.form-control{
+    border-radius: 25px;
+    border: 1px solid #474747;
+    width: 100%;
+    padding: 15px 17px 15px 53px;
+    background: transparent;
+    font-family: 'NeoSansPro', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #858585;
+}
+select.form-control {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image:
+            linear-gradient(45deg, transparent 50%, gray 50%),
+            linear-gradient(135deg, gray 50%, transparent 50%);
+    background-position:
+            calc(100% - 25px) calc(1em + 4px),
+            calc(100% - 21px) calc(1em + 4px),
+            calc(100% - 2.5em) 0.5em;
+    background-size:
+            5px 5px,
+            5px 5px,
+            1px 1.5em;
+    background-repeat: no-repeat;
+}
+
+select.form-control:focus {
+    background-image:
+            linear-gradient(45deg, #ffc824 50%, transparent 50%),
+            linear-gradient(135deg, transparent 50%, #ffc824 50%);
+    background-position:
+            calc(100% - 21px) calc(1em + 4px),
+            calc(100% - 25px) calc(1em + 4px),
+            calc(100% - 2.5em) 0.5em;
+    background-size:
+            5px 5px,
+            5px 5px,
+            1px 1.5em;
+    background-repeat: no-repeat;
+}
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+.form-control option {
+    color: #000;
+}
+.form-control:focus{
+    outline: none;
+    color: #fff;
+    border-color: #ffc824;
+}
+.form-control:focus~.form-input-img svg path{
+    fill: #ffc824;
+}
+.form-input-img{
+    position: absolute;
+    top: 15px;
+    left: 21px;
+}
+
+.invalid-feedback {
+    display: none;
+}
+.form-control.invalid::placeholder{
+    color: #ff120d;
+}
+.form-control.invalid{
+    border-color: #ff120d;
+}
+.form-control.invalid~.form-input-img svg path{
+    fill: #ff120d;
+}
+.form-control.invalid~.invalid-feedback{
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    display: block;
+    font-family: 'NeoSansPro', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ff120d;
+}
+/*input[type='email']{*/
+    /*background: url("../img/mail.svg") no-repeat;*/
+    /*background-position: 21px 50%;*/
+/*}*/
+/*input[type='password']{*/
+    /*background: url("../img/pass.svg") no-repeat;*/
+    /*background-position: 21px 12px;*/
+/*}*/
+/*select[name='lang']{*/
+    /*background: url("../img/lang.svg") no-repeat;*/
+    /*background-position: 21px 50%;*/
+/*}*/
+
+.form-label-wrap{
+    margin-bottom: 40px;
+}
+.form-label{
+    font-family: 'NeoSansPro', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 21px;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+/*CHECKBOX BTN*/
+.form-label-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-label-wrap .checkbox__item {
+    text-align: left;
+    position: relative;
+    padding-left: 32px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+}
+.form-label-wrap .checkbox__item:last-child {
+    margin-bottom: 0;
+}
+.form-label-wrap .checkbox__item input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.form-label-wrap .checkmark {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    border: solid 1px #464852;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-label-wrap .checkbox__item:hover input ~ .checkmark {
+    background-color: #cccccc26;
+}
+.form-label-wrap .checkbox__item input:checked ~ .checkmark {
+    background-color: #ffc824;
+}
+.form-label-wrap .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.form-label-wrap .checkbox__item input:checked ~ .checkmark:after {
+    display: block;
+}
+.form-label-wrap .checkbox__item .checkmark:after {
+    top: 3px;
+    width: 4px;
+    height: 8px;
+    border: solid #000000;
+    border-width: 0px 2px 2px 0px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/*END CHECKBOX BTN*/
+.rules{
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+
+.registration .btn{
+    margin-bottom: 20px;
+}
+.registration_have-akk{
+    font-family: 'NeoSansPro', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    text-align: center;
+}
+.registration_have-akk-link{
+    font-weight: 500;
+    color: #ffcc00;
+    text-decoration: none;
+}
