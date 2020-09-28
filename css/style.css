@@ -320,6 +320,9 @@ input:-webkit-autofill:focus {
     -webkit-box-shadow: 0 0 0 1000px #000 inset;
     -webkit-text-fill-color: #ffc824;
 }
+input:-webkit-autofill{
+    border-color: #ffc824;
+}
 input:-webkit-autofill~.form-input-img svg path{
     fill: #ffc824;
 }
