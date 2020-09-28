@@ -316,15 +316,26 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:active,
 input:-webkit-autofill:focus {
     background-color: #000;
-    color: #ffc824 ;
+    color: #fff ;
     -webkit-box-shadow: 0 0 0 1000px #000 inset;
-    -webkit-text-fill-color: #ffc824;
+    -webkit-text-fill-color: #fff;
 }
 input:-webkit-autofill{
     border-color: #ffc824;
 }
 input:-webkit-autofill~.form-input-img svg path{
     fill: #ffc824;
+}
+.form-control.filled~.form-input-img svg path {
+    fill: #ffc824;
+}
+.form-control.filled {
+    color: #fff;
+    border-color: #ffc824;
+}
+constructed stylesheet
+input:-webkit-autofill {
+    border-color: #ffc824;
 }
 /*END CHECKBOX BTN*/
 .rules{
