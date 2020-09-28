@@ -311,6 +311,15 @@ select:-moz-focusring {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus {
+    background-color: #000;
+    color: #ffc824 ;
+    -webkit-box-shadow: 0 0 0 1000px #000 inset;
+    -webkit-text-fill-color: #ffc824;
+}
 /*END CHECKBOX BTN*/
 .rules{
     color: #ffcc00;
